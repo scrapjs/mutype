@@ -1,0 +1,25 @@
+{
+  "name": "mutypes",
+  "version": "0.0.1",
+  "description": "Micro types checker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:dfcreative/mutypes.git"
+  },
+  "keywords": [
+    "types",
+    "is-object",
+    "is-array",
+    "is-plain"
+  ],
+  "author": "Deema Evanov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dfcreative/mutypes/issues"
+  },
+  "homepage": "https://github.com/dfcreative/mutypes"
+}
