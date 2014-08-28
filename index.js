@@ -63,6 +63,7 @@ var _ = module.exports = {
 	},
 
 	isElement: function(target){
+		if (typeof document === 'undefined') return;
 		return target instanceof HTMLElement
 	},
 
