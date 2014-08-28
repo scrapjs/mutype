@@ -2,6 +2,8 @@
 * Trivial types checkers.
 * Because there’re no common lib for that ( lodash_ is a fatguy)
 */
+//TODO: make main use as `is.array(target)`
+
 var _ = module.exports = {
 	//speedy impl,ementation of `in`
 	//NOTE: `!target[propName]` 2-3 orders faster than `!(propName in target)`
