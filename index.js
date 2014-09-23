@@ -13,9 +13,12 @@ module.exports = {
 	isBool: isBool,
 	isPlain: isPlain,
 	isArray: isArray,
+	isArrayLike: isArrayLike,
 	isElement: isElement,
 	isPrivateName: isPrivateName
 };
+
+var win = typeof window === 'undefined' ? this : window;
 
 //speedy impl,ementation of `in`
 //NOTE: `!target[propName]` 2-3 orders faster than `!(propName in target)`
@@ -76,8 +79,13 @@ function isArray(a){
 	return a instanceof Array;
 }
 
+//FIXME: add tests from http://jsfiddle.net/ku9LS/1/
+function isArrayLike(a){
+	return isArray(a) || (a && !isString(a) && !a.nodeType && a != win && !isFn(a) && typeof a.length === 'number');
+}
+
 function isElement(target){
-	if (typeof document === 'undefined') return;
+	if (typeof doc === 'undefined') return;
 	return target instanceof HTMLElement;
 }
 
