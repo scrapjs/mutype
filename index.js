@@ -60,15 +60,15 @@ function isFn(a){
 }
 
 function isString(a){
-	return typeof a === 'string';
+	return typeof a === 'string' || a instanceof String;
 }
 
 function isNumber(a){
-	return typeof a === 'number';
+	return typeof a === 'number' || a instanceof Number;
 }
 
 function isBool(a){
-	return typeof a === 'boolean';
+	return typeof a === 'boolean' || a instanceof Boolean;
 }
 
 function isPlain(a){
