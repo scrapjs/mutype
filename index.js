@@ -19,6 +19,7 @@ module.exports = {
 };
 
 var win = typeof window === 'undefined' ? this : window;
+var doc = typeof document === 'undefined' ? this : document;
 
 //speedy impl,ementation of `in`
 //NOTE: `!target[propName]` 2-3 orders faster than `!(propName in target)`
@@ -85,8 +86,7 @@ function isArrayLike(a){
 }
 
 function isElement(target){
-	if (typeof doc === 'undefined') return;
-	return target instanceof HTMLElement;
+	return doc && target instanceof HTMLElement;
 }
 
 function isPrivateName(n){
