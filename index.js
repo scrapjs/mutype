@@ -10,12 +10,13 @@ module.exports = {
 	isFn: isFn,
 	isString: isString,
 	isNumber: isNumber,
-	isBool: isBool,
+	isBoolean: isBool,
 	isPlain: isPlain,
 	isArray: isArray,
 	isArrayLike: isArrayLike,
 	isElement: isElement,
-	isPrivateName: isPrivateName
+	isPrivateName: isPrivateName,
+	isRegExp: isRegExp
 };
 
 var win = typeof window === 'undefined' ? this : window;
@@ -91,4 +92,8 @@ function isElement(target){
 
 function isPrivateName(n){
 	return n[0] === '_' && n.length > 1;
+}
+
+function isRegExp(target){
+	return target instanceof RegExp;
 }
