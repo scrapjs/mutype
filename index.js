@@ -20,7 +20,7 @@ module.exports = {
 };
 
 var win = typeof window === 'undefined' ? this : window;
-var doc = typeof document === 'undefined' ? this : document;
+var doc = typeof document === 'undefined' ? null : document;
 
 //speedy impl,ementation of `in`
 //NOTE: `!target[propName]` 2-3 orders faster than `!(propName in target)`
