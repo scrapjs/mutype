@@ -1,7 +1,14 @@
 Modest library for checking types.
 
-## TODO
-
-* Think of using this:
-	* `is(Element, this)`
-	* `is('string`, this)`
+* `has`
+* `isObject`
+* `isFn`
+* `isString`
+* `isNumber`
+* `isBoolean`
+* `isPlain`
+* `isArray`
+* `isArrayLike`
+* `isElement`
+* `isPrivateName`
+* `isRegExp`
