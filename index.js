@@ -16,7 +16,8 @@ module.exports = {
 	isArrayLike: isArrayLike,
 	isElement: isElement,
 	isPrivateName: isPrivateName,
-	isRegExp: isRegExp
+	isRegExp: isRegExp,
+	isEmpty: isEmpty
 };
 
 var win = typeof window === 'undefined' ? this : window;
@@ -55,6 +56,14 @@ function isObject(a){
 	};
 
 	return typeof result == 'undefined' || has(a, result);
+}
+
+function isEmpty(a){
+	if (!a) return true;
+	for (var k in a) {
+		return false;
+	}
+	return true;
 }
 
 function isFn(a){
