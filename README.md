@@ -12,3 +12,5 @@ Modest library for checking types.
 * `isElement`
 * `isPrivateName`
 * `isRegExp`
+
+[![NPM](https://nodei.co/npm/mutype.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/mutype/)
