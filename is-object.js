@@ -1,3 +1,9 @@
+var isPlain = require('./is-plain');
+var isArray = require('./is-array');
+var isElement = require('./is-element');
+var isFn = require('./is-fn');
+var has = require('./has');
+
 //isPlainObject
 module.exports = function(a){
 	var Ctor, result;
@@ -7,7 +13,7 @@ module.exports = function(a){
 	// avoid non `Object` objects, `arguments` objects, and DOM elements
 	if (
 		//FIXME: this condition causes weird behaviour if a includes specific valueOf or toSting
-		// !(a && ('' + a) === '[object Object]') ||
+		!(a && ('' + a) === '[object Object]') ||
 		(!has(a, 'constructor') && (Ctor = a.constructor, isFn(Ctor) && !(Ctor instanceof Ctor))) ||
 		!(typeof a === 'object')
 		) {

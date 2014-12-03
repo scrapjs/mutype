@@ -13,4 +13,30 @@ describe('Types checking', function(){
 		//TODO: test window with frames
 		//TODO: test nodelist
 	});
+	it('isPlain', function(){
+		assert(type.isPlain(1));
+		assert(type.isPlain('asdf'));
+		assert(type.isPlain(false));
+		assert(type.isPlain());
+		assert(type.isPlain(null));
+		assert(type.isPlain(NaN));
+		assert(type.isPlain(undefined));
+		assert(type.isPlain(Infinity));
+		assert(!type.isPlain({}));
+		assert(!type.isPlain([]));
+	});
+	it('isObject', function(){
+		assert(type.isObject({}));
+		assert(!type.isObject(1));
+		assert(!type.isObject('asdf'));
+		assert(!type.isObject(false));
+		assert(!type.isObject());
+		assert(!type.isObject(null));
+		assert(!type.isObject(NaN));
+		assert(!type.isObject(undefined));
+		assert(!type.isObject(Infinity));
+		assert(!type.isObject([]));
+		assert(!type.isObject(function(){}));
+		assert(!type.isObject(new Date));
+	});
 });
