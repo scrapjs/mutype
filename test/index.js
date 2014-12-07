@@ -38,5 +38,8 @@ describe('Types checking', function(){
 		assert(!type.isObject([]));
 		assert(!type.isObject(function(){}));
 		assert(!type.isObject(new Date));
+
+		var x = new function(){};
+		assert(!type.isObject(x));
 	});
 });
