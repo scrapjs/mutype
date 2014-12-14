@@ -1,6 +1,7 @@
+# μType [![Build Status](https://travis-ci.org/dfcreative/mutype.svg?branch=master)](https://travis-ci.org/dfcreative/mutype) [![Code Climate](https://codeclimate.com/github/dfcreative/mutype/badges/gpa.svg)](https://codeclimate.com/github/dfcreative/mutype) <a href="UNLICENSE"><img src="http://upload.wikimedia.org/wikipedia/commons/6/62/PD-icon.svg" width="20"/></a>
+
 Modest library for checking types.
 
-* `has`
 * `isObject`
 * `isFn`
 * `isString`
