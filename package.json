@@ -6,6 +6,9 @@
   "scripts": {
     "test": "mocha"
   },
+  "files": [
+    "*.js"
+  ],
   "repository": {
     "type": "git",
     "url": "git@github.com:dfcreative/mutypes.git"
@@ -17,8 +20,8 @@
     "is-array-like",
     "is-plain"
   ],
-  "author": "Deema Evanov",
-  "license": "MIT",
+  "author": "Deema Yvanov",
+  "license": "unlicense",
   "bugs": {
     "url": "https://github.com/dfcreative/mutypes/issues"
   },
