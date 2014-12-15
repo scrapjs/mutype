@@ -1,6 +1,6 @@
 {
   "name": "mutype",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "description": "Micro types checker",
   "main": "index.js",
   "scripts": {
