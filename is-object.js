@@ -5,7 +5,7 @@
 //TODO: add st8 tests
 
 //isPlainObject indeed
-module.exports = function(a){
+module.exports = function(o){
 	// return obj === Object(obj);
-	return a && a.constructor && a.constructor.name === "Object";
+	return !!o && typeof o === 'object' && o.constructor === Object;
 };
